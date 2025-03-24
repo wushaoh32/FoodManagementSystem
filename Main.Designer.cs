@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
+            基础信息MToolStripMenuItem = new MenuStrip();
             基础信息ToolStripMenuItem = new ToolStripMenuItem();
             辅助工具ToolStripMenuItem = new ToolStripMenuItem();
             系统维护ToolStripMenuItem = new ToolStripMenuItem();
@@ -38,27 +38,27 @@
             toolStripMenuItem6 = new ToolStripMenuItem();
             帮助ToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
-            statusStrip1 = new StatusStrip();
+            系统维护SToolStripMenuItem = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             toolStripProgressBar1 = new ToolStripProgressBar();
             toolStripStatusLabel2 = new ToolStripStatusLabel();
             toolStripProgressBar2 = new ToolStripProgressBar();
             toolStripStatusLabel3 = new ToolStripStatusLabel();
             toolStripProgressBar3 = new ToolStripProgressBar();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            menuStrip1.SuspendLayout();
-            statusStrip1.SuspendLayout();
+            lvDesk = new ListView();
+            基础信息MToolStripMenuItem.SuspendLayout();
+            系统维护SToolStripMenuItem.SuspendLayout();
             SuspendLayout();
             // 
-            // menuStrip1
+            // 基础信息MToolStripMenuItem
             // 
-            menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { 基础信息ToolStripMenuItem, 辅助工具ToolStripMenuItem, 系统维护ToolStripMenuItem, 系统设置ToolStripMenuItem, toolStripMenuItem2, toolStripMenuItem5, toolStripMenuItem6 });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 32);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
+            基础信息MToolStripMenuItem.ImageScalingSize = new Size(24, 24);
+            基础信息MToolStripMenuItem.Items.AddRange(new ToolStripItem[] { 基础信息ToolStripMenuItem, 辅助工具ToolStripMenuItem, 系统维护ToolStripMenuItem, 系统设置ToolStripMenuItem, toolStripMenuItem2, toolStripMenuItem5, toolStripMenuItem6 });
+            基础信息MToolStripMenuItem.Location = new Point(0, 0);
+            基础信息MToolStripMenuItem.Name = "基础信息MToolStripMenuItem";
+            基础信息MToolStripMenuItem.Size = new Size(800, 32);
+            基础信息MToolStripMenuItem.TabIndex = 0;
+            基础信息MToolStripMenuItem.Text = "menuStrip1";
             // 
             // 基础信息ToolStripMenuItem
             // 
@@ -112,15 +112,15 @@
             toolStripMenuItem1.Name = "toolStripMenuItem1";
             toolStripMenuItem1.Size = new Size(100, 34);
             // 
-            // statusStrip1
+            // 系统维护SToolStripMenuItem
             // 
-            statusStrip1.ImageScalingSize = new Size(24, 24);
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripProgressBar1, toolStripStatusLabel2, toolStripProgressBar2, toolStripStatusLabel3, toolStripProgressBar3 });
-            statusStrip1.Location = new Point(0, 419);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(800, 31);
-            statusStrip1.TabIndex = 1;
-            statusStrip1.Text = "statusStrip1";
+            系统维护SToolStripMenuItem.ImageScalingSize = new Size(24, 24);
+            系统维护SToolStripMenuItem.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripProgressBar1, toolStripStatusLabel2, toolStripProgressBar2, toolStripStatusLabel3, toolStripProgressBar3 });
+            系统维护SToolStripMenuItem.Location = new Point(0, 419);
+            系统维护SToolStripMenuItem.Name = "系统维护SToolStripMenuItem";
+            系统维护SToolStripMenuItem.Size = new Size(800, 31);
+            系统维护SToolStripMenuItem.TabIndex = 1;
+            系统维护SToolStripMenuItem.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
@@ -155,35 +155,37 @@
             toolStripProgressBar3.Name = "toolStripProgressBar3";
             toolStripProgressBar3.Size = new Size(100, 23);
             // 
-            // flowLayoutPanel1
+            // lvDesk
             // 
-            flowLayoutPanel1.Location = new Point(0, 35);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(800, 381);
-            flowLayoutPanel1.TabIndex = 2;
+            lvDesk.Location = new Point(0, 35);
+            lvDesk.Name = "lvDesk";
+            lvDesk.Size = new Size(800, 381);
+            lvDesk.TabIndex = 2;
+            lvDesk.UseCompatibleStateImageBehavior = false;
+            lvDesk.SelectedIndexChanged += frmMain_Activated_SelectedIndexChanged;
             // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(flowLayoutPanel1);
-            Controls.Add(statusStrip1);
-            Controls.Add(menuStrip1);
+            Controls.Add(lvDesk);
+            Controls.Add(系统维护SToolStripMenuItem);
+            Controls.Add(基础信息MToolStripMenuItem);
             Name = "frmMain";
             Text = "餐饮管理系统";
             Load += frmMain_Load;
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
-            statusStrip1.ResumeLayout(false);
-            statusStrip1.PerformLayout();
+            基础信息MToolStripMenuItem.ResumeLayout(false);
+            基础信息MToolStripMenuItem.PerformLayout();
+            系统维护SToolStripMenuItem.ResumeLayout(false);
+            系统维护SToolStripMenuItem.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private MenuStrip menuStrip1;
+        private MenuStrip 基础信息MToolStripMenuItem;
         private ToolStripMenuItem 基础信息ToolStripMenuItem;
         private ToolStripMenuItem 辅助工具ToolStripMenuItem;
         private ToolStripMenuItem 系统维护ToolStripMenuItem;
@@ -193,13 +195,13 @@
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem toolStripMenuItem5;
         private ToolStripMenuItem toolStripMenuItem6;
-        private StatusStrip statusStrip1;
+        private StatusStrip 系统维护SToolStripMenuItem;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripProgressBar toolStripProgressBar1;
         private ToolStripStatusLabel toolStripStatusLabel2;
         private ToolStripProgressBar toolStripProgressBar2;
         private ToolStripStatusLabel toolStripStatusLabel3;
         private ToolStripProgressBar toolStripProgressBar3;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private ListView lvDesk;
     }
 }
